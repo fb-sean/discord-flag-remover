@@ -64,7 +64,8 @@ async fn handle_event(
             }
 
             if let EmojiReactionType::Unicode { name } = &reaction.emoji {
-                if flag_regex.is_match(&name) {
+                if flag_regex.is_match(&name) || name == "🏳️‍🌈" || name == "🏳️‍⚧️"
+                {
                     tracing::info!("Flag emoji detected: {}", name);
                     if let Err(e) = http
                         .delete_all_reaction(

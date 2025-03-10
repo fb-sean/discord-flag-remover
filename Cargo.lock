@@ -179,6 +179,7 @@ dependencies = [
  "tracing-subscriber",
  "twilight-gateway",
  "twilight-http",
+ "twilight-http-ratelimiting",
  "twilight-model",
 ]
 
